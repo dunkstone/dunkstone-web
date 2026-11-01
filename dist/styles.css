@@ -185,3 +185,15 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .hero-logo { visibility: hidden; }
   .splash-still { opacity: 1; }
 }
+
+/* Policy pages. */
+.legal { max-width: 760px; padding-block: 64px 96px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.legal h1 { font-family: 'Arial Black', Arial, sans-serif; font-size: clamp(40px, 6vw, 64px); line-height: 1.05; color: var(--paper); margin: 24px 0 12px; }
+.legal h2 { font-size: 20px; color: var(--paper); margin: 44px 0 10px; }
+.legal p { margin: 0 0 16px; }
+.legal ul { margin: 0 0 16px; padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+.legal strong { color: var(--paper); }
+.legal-date { color: var(--stone); font-size: 13px; }
+@media (max-width: 760px) { .legal { width: calc(100% - 32px); padding-block: 40px 64px; } }
