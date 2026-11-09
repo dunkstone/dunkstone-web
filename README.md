@@ -71,7 +71,7 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 
 - Every page carries the same header (the stone and "Dunkstone" home, the page group's nav, Contact) and the same footer (Cargo Ahoy · Support · Privacy · Contact, the current page marked with `aria-current`). Each page holds its own copy, so change all five together: `index.html`, `404.html` and the three `cargoahoy/` pages.
 - Support's questions and the policy's sections have ids: link to `/cargoahoy/support/#refunds`, `#restore`, `#delete-data` and so on, or `/cargoahoy/privacy/#rights`. Support opens the linked answer.
-- `404.html` is Vercel's page for unknown paths. Each page names its trailing-slash URL as canonical, since the no-slash form also answers.
+- `404.html` is Vercel's page for unknown paths. It speaks for the studio, not any one game, so it links home, to the games and to the studio. Each page names its trailing-slash URL as canonical, since the no-slash form also answers.
 - Motion uses the `--ease`, `--fast` and `--slow` tokens. Pages cross-fade (view transitions) under a still header and footer, hover moves apply only where a pointer hovers, and reduced motion turns them all off.
 
 ## Cargo Ahoy pages
