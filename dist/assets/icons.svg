@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Dunkstone UI icons: one 24 px grid, 2 px stroke, square caps and mitred corners to match Arial Black.
+       Used as <svg class="icon"><use href="/assets/icons.svg#name"/></svg>; colour comes from currentColor. -->
+  <defs>
+    <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M20 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 20V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+    <symbol id="arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 18L17 7M8 6h10v10"/></symbol>
+    <symbol id="arrow-down-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 6l11 11M18 8v10H8"/></symbol>
+    <symbol id="arrow-down-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M18 6L7 17M6 8v10h10"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 5h18v14H3zM4 6l8 7 8-7"/></symbol>
+  </defs>
+</svg>

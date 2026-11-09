@@ -37,23 +37,24 @@
   const games = window.DUNKSTONE_GAMES || [];
   if (!list || !games.length) return;
 
-  const storeLinks = game => {
-    const links = document.createElement('div');
-    links.className = 'store-links';
-    for (const [key, name] of [['appStoreUrl', 'App Store'], ['playStoreUrl', 'Google Play']]) {
-      if (!game[key]) continue;
+  // Live listings turn the matching official badge into a link; until then the badge stays unlinked.
+  const linkBadges = (article, game) => {
+    for (const [key, name, selector] of [
+      ['appStoreUrl', 'App Store', '.store-badge--apple'],
+      ['playStoreUrl', 'Google Play', '.store-badge--google']]) {
+      const badge = article.querySelector(selector);
+      if (!game[key] || !badge || badge.closest('a')) continue;
       try {
         const url = new URL(game[key]);
         if (url.protocol !== 'https:') continue;
         const link = document.createElement('a');
         link.href = url.href;
-        link.className = 'development';
-        link.textContent = name;
         link.setAttribute('aria-label', `${game.title} on ${name}`);
-        links.append(link);
-      } catch { /* Omit invalid links until corrected. */ }
+        badge.replaceWith(link);
+        link.append(badge);
+        link.nextElementSibling?.remove();
+      } catch { /* Leave the badge unlinked until the URL is corrected. */ }
     }
-    return links;
   };
 
   const entries = games.map(game => {
@@ -85,22 +86,32 @@
       article.append(details);
     }
     const details = article.querySelector('.game-details');
-    details.querySelector('h3').textContent = game.title;
+    const heading = details.querySelector('h3');
+    heading.textContent = game.title;
+    if (!featured && game.url?.startsWith('/')) {
+      const link = document.createElement('a');
+      link.href = game.url;
+      link.textContent = game.title;
+      heading.replaceChildren(link);
+    }
     details.querySelector('.game-description').textContent = game.description || '';
-    const artwork = article.querySelector('img');
+    const artwork = article.querySelector('.game-entry-icon, .catalogue-artwork');
     if (artwork && game.artwork) artwork.src = game.artwork;
     const platforms = article.querySelector('.game-platforms');
-    const status = document.createElement('span');
-    status.className = 'development';
-    status.textContent = game.status || 'In development';
+    let status = platforms.querySelector('.development');
+    if (!status) {
+      status = document.createElement('span');
+      status.className = 'development';
+    }
+    // Keep the pill's dot: only its text changes.
+    status.replaceChildren(...status.querySelectorAll('.status-dot'), ` ${game.status || 'In development'}`);
     platforms.replaceChildren(status);
     if (Array.isArray(game.platforms) && game.platforms.length) {
       const text = document.createElement('p');
       text.textContent = `Planned for ${game.platforms.join(', ')}`;
       platforms.append(text);
     }
-    const links = storeLinks(game);
-    if (links.childElementCount) platforms.append(links);
+    linkBadges(article, game);
     return article;
   });
   list.replaceChildren(...entries);

@@ -40,25 +40,23 @@ The original v2 assets below were copied byte-for-byte from these read-only sibl
 | `dunkstone-logo.svg` | `Branding/logo/vector/full-logo/dunkstone-logo-off-white.svg` |
 | `dunkstone-stone.svg` | `Branding/logo/vector/stone/dunkstone-icon-off-white.svg` |
 | `dunkstone-stone-small.svg` | `Branding/logo/vector/stone-small/dunkstone-tiny-off-white.svg` |
-| `favicon.png` | `Branding/logo/png/stone/dunkstone-stone-32-off-white.png` |
+| `favicon.png`, `favicon-48.png`, `favicon-64.png` | `Branding/logo/png/stone/dunkstone-stone-{32,48,64}-off-white.png` |
 | `social.png` | `Branding/press-kit/images/dunkstone-sharing-card-1200x630.png` |
-| `dunkstone-splash.mp4`, `dunkstone-splash.webm` | `Branding/splash-animation/dunkstone-splash-dark.mp4`, `.webm` |
+| `dunkstone-splash.mp4`, `dunkstone-splash.webm` | `Branding/splash-animation/dunkstone-splash-dark.mp4`, `.webm` at `1dd26ca`, the silent cut. Branding has since added a sound to its videos (`8427ecf`, `0cc7b7a`); the site plays the splash muted, so it keeps the silent files |
 | `dunkstone-splash-static.png` | `Branding/splash-animation/dunkstone-splash-dark-static.png` |
-| `cargo-ahoy.png` | `CargoAhoy/ArtSource/References/UI/app-icon.png` (approved October 28, 2026) |
 | `cargo-ahoy-icon.png` (512 px), `cargo-ahoy-icon-180.png` | the current approved app icon (the lighter-sky revision, CargoAhoy `33adeefa`), downscaled; the 180 px copy is `CargoAhoy/Assets/_Project/Art/AppIcon/iOS/T_AppIcon_iOS_180.png` |
 | `badge-app-store.svg`, `badge-google-play.png` | Apple's black US-UK "Download on the App Store" badge (developer.apple.com/assets/elements/badges/download-on-the-app-store.svg) and Google's English "Get it on Google Play" badge (play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png), downloaded 2026-11-09, unmodified. Shown unlinked with "Coming soon" / "Coming later" under them until each listing is live; then wrap each in a link to its store page and drop the caption. Keep them the same visible height (Google's at least as large), with a quarter of their height as clear space, and keep the trademark line under the page's links |
 | `cargo-ahoy-wordmark.png` (1200 px wide) | `CargoAhoy/ArtSource/References/Logo/wordmark.png` (approved November 5, 2026), downscaled |
 | `cargo-ahoy-shot-stack.jpg`, `-voyage.jpg`, `-ships.jpg` (640 px wide) | Captured 2026-11-09 from the main Editor's Device Simulator on "iOS Notch Device Large" (1284 × 2778), so the UI keeps the device's safe area: the storm tower at 62 (each drop aimed along an irregular wave and balance-checked, so it meanders like a played tower), the Map after Kraken Reef's postcard and the Collection's Ships tab (a profile owning five ships with the Red Cutter equipped, voyage at Kraken Reef). All three are whole screens at the same scale. Recapture them, not the Game view's store shots, whenever the game's look changes |
+| `icons.svg` | Hand-built sprite of flat UI icons (arrows, plus, mail) on one 24 px grid with a 2 px square-capped stroke in `currentColor`. Every page uses it through `<svg class="icon"><use href="/assets/icons.svg#name"></use></svg>`; no Unicode arrows or emoji stand in for icons |
 
-Cargo Ahoy copy is grounded in its `docs/GDD.md`. Studio attribution follows the owner’s instruction; the game repository README retains an older studio name. The original square icon remains in `cargo-ahoy.png` for reference. The website displays `cargo-ahoy-feature.png`, a transparent ship-and-cargo illustration derived with the built-in image-generation tool from that icon and the owner-approved integrated-artwork mockup. Its organic wave edges blend directly into the off-white section; it is promotional artwork, not a gameplay screenshot. Neither reference repository was modified.
-
-Artwork brief: preserve the three crates, sloop, sail, colors, and game illustration style; remove the blue burst and square frame; use true transparent alpha with soft wave edges and no text or additional objects. The generated PNG is stored inside Website and both the HTML fallback and catalogue reference it.
+Cargo Ahoy copy is grounded in its `docs/GDD.md`. The home page's feature shows the wordmark and two of the screenshots in phone frames on a sea-coloured panel, the app icon beside its name, the official badges unlinked and a link to `/cargoahoy/`. Branding holds no game material, so every Cargo Ahoy asset comes from the CargoAhoy repository.
 
 Use black `#000000` and off-white `#F4F3ED`. Preserve logo proportions, lettering, stone tilt, eyes, and clear space of at least 10% of the artwork’s longest edge. Use the small stone at 32–48 px and the faithful stone at 64 px and above. Never use the studio stone as a game icon. Do not ship the original reference raster or modify the approved motion files. No press-kit download is included.
 
 ## Hosting
 
-`.openai/hosting.json` retains the existing Sites project identity and serves `dist`. This v2 update is local only: no deployment, domain changes, commits, or pushes. Existing absolute social URLs still target the private preview at https://dunkstone-studio.danielntp94.chatgpt.site/. Update them when a public domain is connected; `dunkstone.com` has not been configured here.
+`.openai/hosting.json` retains the existing Sites project identity and serves `dist`. This v2 update is local only: no deployment, domain changes, commits, or pushes. Absolute social URLs use `https://dunkstone.com/`.
 
 ## Validation
 
