@@ -77,7 +77,6 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .game-actions { margin-top: 32px; }
 .games-section .button { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .games-section .button:hover { background: transparent; color: var(--ink); }
-.game-details .eyebrow { font-size: 10px; letter-spacing: 1.2px; color: #55554f; margin-bottom: 16px; }
 .game-details h3 { font-family: 'Arial Black', Arial, sans-serif; font-size: clamp(36px, 4.4vw, 64px); letter-spacing: -.06em; line-height: 1.05; margin: 0; }
 .game-description { color: #45453f; font-size: 16px; line-height: 1.75; margin: 0; max-width: 490px; }
 .game-platforms { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; margin-top: 24px; }
@@ -174,7 +173,6 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .game-title-row { gap: 14px; }
   .game-entry-icon { width: 64px; height: 64px; }
   .game-details h3 { font-size: clamp(40px, 10vw, 60px); }
-  .game-details .eyebrow { font-size: 9px; }
   .game-description { font-size: 15px; }
   .game-platforms { gap: 12px; margin-top: 20px; }
   .games-foot { align-items: flex-start; flex-direction: column; gap: 4px; }
