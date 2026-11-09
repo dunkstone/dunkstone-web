@@ -9,6 +9,9 @@
   --ease: cubic-bezier(.2, .8, .2, 1);
   --fast: .2s;
   --slow: .35s;
+  /* Bigger moves (the showcase's zoom and lift) take longer on a softer curve. */
+  --ease-soft: cubic-bezier(.33, 1, .68, 1);
+  --slower: .6s;
   color-scheme: dark;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--ink);
@@ -74,7 +77,7 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 /* Beside the text the panel takes the text's height: the wordmark sits left, the phones rise from the bottom edge
    at 125% of the panel's height (so the edge always cuts them), and a narrow panel shows one phone. */
 .game-showcase { container-type: inline-size; position: relative; margin: 0; min-height: 280px; display: flex; align-items: center; padding: 28px 0 28px 6%; overflow: hidden; border-radius: 28px; background: radial-gradient(ellipse 60% 75% at 32% 48%, rgba(24,104,132,.42) 0%, rgba(14,52,86,.28) 45%, rgba(0,0,0,0) 80%), var(--ink); }
-.game-showcase-wordmark { position: relative; z-index: 1; width: 40%; max-width: 360px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.45)); transition: transform var(--slow) cubic-bezier(.2 var(--ease), .8 var(--ease), .2 var(--ease), 1) var(--ease); }
+.game-showcase-wordmark { position: relative; z-index: 1; width: 40%; max-width: 360px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.45)); transition: transform var(--slower) var(--ease-soft); will-change: transform; }
 .game-showcase { cursor: pointer; }
 .game-showcase-phones { position: absolute; top: 28px; bottom: 0; right: 6%; display: flex; align-items: flex-start; gap: 18px; }
 .game-showcase .play-phone { height: 125%; width: auto; max-width: none; flex: none; }
@@ -246,7 +249,7 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .play-card--stack .play-card-media { background: radial-gradient(ellipse 90% 80% at 50% 100%, #2f5370 0%, #121c26 75%); }
 .play-card--voyage .play-card-media { background: radial-gradient(ellipse 90% 80% at 50% 100%, #6b4a22 0%, #1f160c 75%); }
 .play-card--ships .play-card-media { background: radial-gradient(ellipse 90% 80% at 50% 100%, #24477a 0%, #0f1828 75%); }
-.play-phone { position: relative; width: 62%; max-width: 250px; align-self: flex-start; transition: transform var(--slow) var(--ease); }
+.play-phone { position: relative; width: 62%; max-width: 250px; align-self: flex-start; transition: transform var(--slower) var(--ease-soft); will-change: transform; }
 .play-phone::before { content: ''; position: absolute; top: 11px; left: 50%; width: 30%; height: 9px; transform: translateX(-50%); border-radius: 9px; background: #0b0b0b; }
 .play-phone img { width: 100%; height: auto; border: 5px solid #0b0b0b; border-bottom: 0; border-radius: 26px 26px 0 0; box-shadow: 0 18px 40px rgba(0,0,0,.55); }
 .play-card-body { padding: 20px 22px 24px; }
