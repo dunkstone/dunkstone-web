@@ -378,3 +378,8 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .faq-item::details-content { transition: none; }
   .brand img { transition: none; }
 }
+/* Play cards: the phone is sized by the card's media height, not its width, and always runs past the bottom edge,
+   so no card width ever leaves a gap under the screenshot. */
+.play-card-media { position: relative; }
+.play-card-media .play-phone { position: absolute; top: 28px; left: 50%; translate: -50% 0; height: 110%; width: auto; max-width: none; }
+.play-card-media .play-phone img { height: 100%; width: auto; max-width: none; }
