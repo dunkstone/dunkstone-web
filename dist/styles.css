@@ -207,7 +207,6 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .game-card-text p { margin: 0 !important; line-height: 1.4; }
 .game-card-name { font-weight: 700; font-size: 18px; color: var(--paper); }
 .game-card-meta { font-size: 13px; color: var(--stone); }
-.game-card-status { display: flex; align-items: center; gap: 8px; margin-top: 8px !important; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; color: var(--paper); }
 .play-cards { list-style: none; padding: 0 !important; margin: 8px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .play-card { margin: 0 !important; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 20px; background: var(--coal); overflow: hidden; }
 .play-card-media { height: 300px; display: flex; justify-content: center; padding-top: 28px; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -273,3 +272,12 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .faq-answer { padding-right: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .faq-icon::before, .faq-icon::after { transition: none; } }
+/* Store badges: official artwork, unmodified (Apple and Google badge guidelines). Both show the same visible height;
+   Google's PNG carries 41/250 of transparent padding top and bottom, cancelled by its negative margin. Clear space
+   is a quarter of the badge height: the gap and the caption's margin keep at least 12 px around a 48 px badge. */
+.legal .store-badges { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 28px; }
+.store-badges li { margin: 0; display: flex; flex-direction: column; align-items: center; }
+.store-badge { display: block; height: 48px; width: auto; }
+.store-badge--google { height: 72px; margin: -12px -6px; }
+.store-badges span { margin-top: 14px; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; color: var(--stone); }
+.trademarks { margin-top: 40px !important; font-size: 11px; line-height: 1.6; color: var(--stone); }
