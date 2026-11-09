@@ -47,6 +47,7 @@ The original v2 assets below were copied byte-for-byte from these read-only sibl
 | `cargo-ahoy.png` | `CargoAhoy/ArtSource/References/UI/app-icon.png` (approved October 28, 2026) |
 | `cargo-ahoy-icon.png` (512 px), `cargo-ahoy-icon-180.png` | the same approved app icon, downscaled; the 180 px copy is `CargoAhoy/Assets/_Project/Art/AppIcon/iOS/T_AppIcon_iOS_180.png` |
 | `cargo-ahoy-wordmark.png` (1200 px wide) | `CargoAhoy/ArtSource/References/Logo/wordmark.png` (approved November 5, 2026), downscaled |
+| `cargo-ahoy-shot-stack.jpg`, `-voyage.jpg`, `-collection.jpg` (640 px wide) | `CargoAhoy/docs/store/screenshots/69in-1-tower-storm.png`, `69in-4-chart.png` (its top 80%, centre-cropped to the same proportions, leaving out the port panel), `69in-3-collection.png`, captured 2026-11-08. Remake them whenever the store screenshots are retaken |
 
 Cargo Ahoy copy is grounded in its `docs/GDD.md`. Studio attribution follows the owner’s instruction; the game repository README retains an older studio name. The original square icon remains in `cargo-ahoy.png` for reference. The website displays `cargo-ahoy-feature.png`, a transparent ship-and-cargo illustration derived with the built-in image-generation tool from that icon and the owner-approved integrated-artwork mockup. Its organic wave edges blend directly into the off-white section; it is promotional artwork, not a gameplay screenshot. Neither reference repository was modified.
 
