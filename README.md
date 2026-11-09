@@ -45,6 +45,8 @@ The original v2 assets below were copied byte-for-byte from these read-only sibl
 | `dunkstone-splash.mp4`, `dunkstone-splash.webm` | `Branding/splash-animation/dunkstone-splash-dark.mp4`, `.webm` |
 | `dunkstone-splash-static.png` | `Branding/splash-animation/dunkstone-splash-dark-static.png` |
 | `cargo-ahoy.png` | `CargoAhoy/ArtSource/References/UI/app-icon.png` (approved October 28, 2026) |
+| `cargo-ahoy-icon.png` (512 px), `cargo-ahoy-icon-180.png` | the same approved app icon, downscaled; the 180 px copy is `CargoAhoy/Assets/_Project/Art/AppIcon/iOS/T_AppIcon_iOS_180.png` |
+| `cargo-ahoy-wordmark.png` (1200 px wide) | `CargoAhoy/ArtSource/References/Logo/wordmark.png` (approved November 5, 2026), downscaled |
 
 Cargo Ahoy copy is grounded in its `docs/GDD.md`. Studio attribution follows the owner’s instruction; the game repository README retains an older studio name. The original square icon remains in `cargo-ahoy.png` for reference. The website displays `cargo-ahoy-feature.png`, a transparent ship-and-cargo illustration derived with the built-in image-generation tool from that icon and the owner-approved integrated-artwork mockup. Its organic wave edges blend directly into the off-white section; it is promotional artwork, not a gameplay screenshot. Neither reference repository was modified.
 

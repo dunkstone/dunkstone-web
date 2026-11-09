@@ -198,10 +198,12 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .legal-date { color: var(--stone); font-size: 13px; }
 @media (max-width: 760px) { .legal { width: calc(100% - 32px); padding-block: 40px 64px; } }
 .legal h3 { font-size: 16px; color: var(--paper); margin: 28px 0 8px; }
-.game-page-intro { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 32px; align-items: center; margin-top: 24px; }
-.game-page h1 { margin-top: 0; }
+.game-page-intro { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 40px; align-items: center; margin-top: 32px; }
+.game-page-icon { width: 100%; border-radius: 22.5%; }
+.game-page-wordmark { width: 100%; max-width: 420px; }
+.game-page h1 { margin: 0 0 16px; }
 .game-page-pitch { font-size: 18px; }
 .game-page-status { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; color: var(--paper); }
 .game-page-highlights { list-style: none; padding: 0 !important; margin: 32px 0 0; border-top: 1px solid var(--line); }
 .game-page-highlights li { padding: 14px 0; margin: 0; border-bottom: 1px solid var(--line); }
-@media (max-width: 600px) { .game-page-intro { grid-template-columns: 1fr; gap: 8px; } .game-page-intro img { max-width: 240px; } }
+@media (max-width: 600px) { .game-page-intro { grid-template-columns: 1fr; gap: 8px; } .game-page-icon { max-width: 140px; } .game-page-intro { gap: 24px; } }
