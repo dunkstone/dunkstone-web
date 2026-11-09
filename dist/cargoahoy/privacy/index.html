@@ -18,11 +18,11 @@
   <main id="main" class="legal shell">
     <p class="section-label"><span>CARGO AHOY / PRIVACY POLICY</span></p>
     <h1>Privacy policy</h1>
-    <p class="legal-date">Last updated: November 1, 2026</p>
+    <p class="legal-date">Last updated: November 9, 2026</p>
     <p>Dunkstone (“we”) makes Cargo Ahoy. This policy explains what happens to your information when you play.</p>
 
     <h2>What the game keeps on your device</h2>
-    <p>Your progress, gold, collection, settings and privacy answers are saved on your device. We don’t ask for your name, email address or an account. Settings shows a support code: a random ID made on your device, which you can quote when you contact us.</p>
+    <p>Your progress, gold, collection, settings and privacy answers are saved on your device. We don’t ask for your name, email address or an account. Settings shows a support code: a random ID made on your device. It’s attached to the game’s analytics and crash reports (below), and you can quote it when you contact us.</p>
 
     <h2>Ads</h2>
     <p>Cargo Ahoy shows ads, and Unity LevelPlay chooses which partner shows each one. To show and measure ads, LevelPlay and its partners may collect:</p>
@@ -43,6 +43,15 @@
       <li><a href="https://www.inmobi.com/privacy-policy">InMobi</a></li>
     </ul>
 
+    <h2>Analytics and crash reports</h2>
+    <p>We use Google’s Firebase to learn how the game is played and to fix crashes:</p>
+    <ul>
+      <li><strong>Google Analytics for Firebase</strong> records gameplay events, such as runs started and finished, heights reached, ads watched and purchases made, along with your support code, Firebase’s app instance ID, your device type, operating system and the rough location your IP address implies.</li>
+      <li><strong>Firebase Crashlytics</strong> sends a report when the game crashes: the device, the operating system, the state of the app and your support code. It never includes your saved game.</li>
+      <li><strong>Firebase Remote Config</strong> downloads the game’s settings, such as ad timing, so we can adjust them without an update.</li>
+    </ul>
+    <p>Nothing is sent before you’ve answered the consent questions. If you don’t consent, analytics runs in Google’s consent mode, which sends events without identifiers. Google handles this data under the <a href="https://firebase.google.com/support/privacy">Firebase privacy and security terms</a> and <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</p>
+
     <h2>Your choices</h2>
     <ul>
       <li><strong>Consent:</strong> where the law requires it, Google’s form asks for your consent before any ad loads.</li>
@@ -52,16 +61,19 @@
     </ul>
 
     <h2>Purchases</h2>
-    <p>Apple or Google handles any purchase. We never see your payment details.</p>
+    <p>Apple or Google handles any purchase. We never see your payment details. Unity IAP handles the store for us. To complete and restore purchases it records your purchase history and an ID for your device, under <a href="https://unity.com/legal/privacy-policy">Unity’s privacy policy</a>.</p>
+
+    <h2>Game Center and reminders</h2>
+    <p>If you’re signed in to Game Center, your best heights are posted to its leaderboards, under Apple’s privacy policy. Reminders are local notifications planned on your device; we don’t run a notification server.</p>
 
     <h2>Children</h2>
     <p>Cargo Ahoy is not directed at children under 13, and we do not knowingly collect their information. If you believe a child has given us information, contact us.</p>
 
     <h2>Your rights</h2>
-    <p>Depending on where you live, you may have the right to access, correct or delete your personal information, to object to its use, and to complain to your privacy regulator. To use these rights, contact us. We hold little that can identify you, so requests about ad data may go to the partners above.</p>
+    <p>Depending on where you live, you may have the right to access, correct or delete your personal information, to object to its use, and to complain to your privacy regulator. To use these rights, contact us with the support code from the game’s Settings: it’s what links your analytics and crash reports to you, and we can delete them with it. We don’t hold your name or email address, so requests about ad data may go to the partners above.</p>
 
     <h2>Transfers and retention</h2>
-    <p>Ad partners may process data outside your country, including in the United States. They keep it for the periods their policies state. Saved game data stays on your device until you delete the game.</p>
+    <p>Google, Unity and the ad partners may process data outside your country, including in the United States. They keep it for the periods their policies state; Crashlytics keeps crash reports for 90 days. Saved game data stays on your device until you delete the game.</p>
 
     <h2>Contact</h2>
     <p>Privacy contact: <a href="mailto:contact@dunkstone.com">contact@dunkstone.com</a>.</p>
@@ -69,6 +81,6 @@
     <h2>Changes</h2>
     <p>We’ll post any change here and update the date above.</p>
   </main>
-  <footer class="footer shell"><a href="/" class="footer-brand" aria-label="Dunkstone home"><img src="/assets/dunkstone-stone-small.svg" alt="" width="32" height="32"><span>Dunkstone</span></a><p>© 2026 Dunkstone</p><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer class="footer shell"><a href="/" class="footer-brand" aria-label="Dunkstone home"><img src="/assets/dunkstone-stone-small.svg" alt="" width="32" height="32"><span>Dunkstone</span></a><p>© 2026 Dunkstone · <a href="/cargoahoy/">Cargo Ahoy support</a></p><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>

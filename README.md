@@ -64,3 +64,9 @@ node --check dist/games.js
 ```
 
 Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard navigation, and the Cargo Ahoy feature with JavaScript disabled. Check completed playback, blocked autoplay, missing video, and reduced motion: the settled still must remain visible. Verify status and platform text without store links, no duplicate game feature, and no horizontal overflow.
+
+## Cargo Ahoy pages
+
+- `/cargoahoy/`: the game page, which is also the App Store Support and Marketing URL, with the contact address and FAQ.
+- `/cargoahoy/privacy/`: the privacy policy. The game's Settings opens it (`MonetizationSettings.privacyPolicyUrl`). It names every SDK that collects data: the ad partners, Unity IAP and Firebase. Update it, and its date, whenever the game adds or drops an SDK, and keep it in step with the App Store privacy labels in CargoAhoy's `docs/STORE_LISTING.md`.
+- `/app-ads.txt`: the ad networks' authorized sellers. Each network that goes live adds its lines.
