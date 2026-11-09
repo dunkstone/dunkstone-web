@@ -68,7 +68,7 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .game-entry:has(.game-showcase) .game-details { align-self: center; }
 /* Beside the text the panel takes the text's height: the wordmark sits left, the phones rise from the bottom edge
    at 125% of the panel's height (so the edge always cuts them), and a narrow panel shows one phone. */
-.game-showcase { container-type: inline-size; position: relative; margin: 0; min-height: 280px; display: flex; align-items: center; padding: 28px 0 28px 6%; overflow: hidden; border-radius: 28px; background: radial-gradient(ellipse 85% 90% at 30% 40%, #1d6a86 0%, #0e3456 55%, #071a2c 100%); }
+.game-showcase { container-type: inline-size; position: relative; margin: 0; min-height: 280px; display: flex; align-items: center; padding: 28px 0 28px 6%; overflow: hidden; border-radius: 28px; background: radial-gradient(ellipse 60% 75% at 32% 48%, rgba(24,104,132,.42) 0%, rgba(14,52,86,.28) 45%, rgba(0,0,0,0) 80%), var(--ink); }
 .game-showcase-wordmark { position: relative; z-index: 1; width: 40%; max-width: 360px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.45)); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
 .game-showcase { cursor: pointer; }
 .game-showcase:hover .game-showcase-wordmark { transform: scale(1.08) rotate(-1.5deg); }
@@ -179,7 +179,7 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .games-heading h2 { font-size: clamp(46px, 11vw, 70px); }
   .game-entry { grid-template-columns: 1fr; gap: 30px; padding: 28px 0; }
   /* Phones: the wordmark above two phones, cut by the bottom edge. */
-  .game-showcase { aspect-ratio: 1; min-height: 0; flex-direction: column; padding: 28px 24px 0; border-radius: 22px; background: radial-gradient(ellipse 85% 70% at 50% 28%, #1d6a86 0%, #0e3456 55%, #071a2c 100%); }
+  .game-showcase { aspect-ratio: 1; min-height: 0; flex-direction: column; padding: 28px 24px 0; border-radius: 22px; background: radial-gradient(ellipse 70% 55% at 50% 30%, rgba(24,104,132,.42) 0%, rgba(14,52,86,.28) 45%, rgba(0,0,0,0) 80%), var(--ink); }
   .game-showcase-wordmark { width: 74%; }
   .game-showcase-phones { position: static; justify-content: center; gap: 6%; width: 100%; margin-top: -2%; }
   .game-showcase .play-phone { width: 42%; height: auto; }
