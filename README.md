@@ -72,4 +72,5 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 - `/cargoahoy/`: the game page, the App Store Marketing URL.
 - `/cargoahoy/support/`: the App Store Support URL: the contact address and common questions.
 - `/cargoahoy/privacy/`: the privacy policy. The game's Settings opens it (`MonetizationSettings.privacyPolicyUrl`). It names every SDK that collects data: the ad partners, Unity IAP and Firebase. Update it, and its date, whenever the game adds or drops an SDK, and keep it in step with the App Store privacy labels in CargoAhoy's `docs/STORE_LISTING.md`.
+- Support and privacy answer for both stores. The Android wording (Google account restores, the advertising ID, Google Play refunds, Play Games, Android 13's notification permission) was written ahead of CargoAhoy's M6 (D-144): re-read it against the Play Console's Data Safety answers when Android ships.
 - `/app-ads.txt`: the ad networks' authorized sellers. Each network that goes live adds its lines.
