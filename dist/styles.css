@@ -64,11 +64,17 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .game-entry + .game-entry { border-top: 0; }
 .catalogue-artwork { width: 100%; aspect-ratio: 1; object-fit: contain; }
 /* The feature: a sea-coloured showcase of the wordmark and two phone-framed screenshots (the game page's .play-phone). */
-.game-showcase { position: relative; margin: 0; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; padding: 40px 24px 0; overflow: hidden; border-radius: 28px; background: radial-gradient(ellipse 85% 70% at 50% 28%, #1d6a86 0%, #0e3456 55%, #071a2c 100%); }
-.game-showcase-wordmark { position: relative; z-index: 1; width: 74%; max-width: 420px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.45)); }
-.game-showcase-phones { display: flex; justify-content: center; align-items: flex-start; gap: 6%; width: 100%; margin-top: -2%; }
-.game-showcase .play-phone { width: 42%; max-width: 236px; flex: none; }
-.game-showcase .play-phone + .play-phone { margin-top: 44px; }
+.game-entry:has(.game-showcase) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: stretch; }
+.game-entry:has(.game-showcase) .game-details { align-self: center; }
+/* Beside the text the panel takes the text's height: the wordmark sits left, the phones rise from the bottom edge
+   at 125% of the panel's height (so the edge always cuts them), and a narrow panel shows one phone. */
+.game-showcase { container-type: inline-size; position: relative; margin: 0; min-height: 280px; display: flex; align-items: center; padding: 28px 0 28px 6%; overflow: hidden; border-radius: 28px; background: radial-gradient(ellipse 85% 90% at 30% 40%, #1d6a86 0%, #0e3456 55%, #071a2c 100%); }
+.game-showcase-wordmark { position: relative; z-index: 1; width: 40%; max-width: 360px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.45)); }
+.game-showcase-phones { position: absolute; top: 28px; bottom: 0; right: 6%; display: flex; align-items: flex-start; gap: 18px; }
+.game-showcase .play-phone { height: 125%; width: auto; max-width: none; flex: none; }
+.game-showcase .play-phone img { height: 100%; width: auto; max-width: none; }
+.game-showcase .play-phone + .play-phone { margin-top: 36px; }
+@container (max-width: 540px) { .game-showcase-phones .play-phone + .play-phone { display: none; } }
 .game-showcase:hover .play-phone { transform: translateY(-6px); }
 .game-title-row { display: flex; align-items: center; gap: 20px; margin-bottom: 22px; }
 .game-entry-icon { width: 84px; height: 84px; border-radius: 22.5%; flex: none; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
@@ -136,7 +142,11 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .logo-stage { min-height: 285px; }
   .hero-bottom { margin-top: 48px; }
   .art-top { font-size: 8px; letter-spacing: .6px; }
-  .game-entry { align-items: start; }
+  .game-entry, .game-entry:has(.game-showcase) { grid-template-columns: 1fr; gap: 32px; }
+  .game-showcase { aspect-ratio: 16 / 9; padding-left: 8%; }
+  .game-showcase-wordmark { width: 46%; }
+  .game-showcase-phones { right: 10%; }
+  .game-showcase-phones .play-phone + .play-phone { display: none; }
   .game-description { font-size: 14px; }
   .studio-grid { gap: 7%; }
   .large-copy { font-size: 22px; }
@@ -166,8 +176,13 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
   .games-heading { display: block; padding: 33px 0; }
   .games-heading h2 { font-size: clamp(46px, 11vw, 70px); }
   .game-entry { grid-template-columns: 1fr; gap: 30px; padding: 28px 0; }
-  .game-showcase { padding-top: 28px; border-radius: 22px; }
-  .game-showcase .play-phone + .play-phone { margin-top: 28px; }
+  /* Phones: the wordmark above two phones, cut by the bottom edge. */
+  .game-showcase { aspect-ratio: 1; min-height: 0; flex-direction: column; padding: 28px 24px 0; border-radius: 22px; background: radial-gradient(ellipse 85% 70% at 50% 28%, #1d6a86 0%, #0e3456 55%, #071a2c 100%); }
+  .game-showcase-wordmark { width: 74%; }
+  .game-showcase-phones { position: static; justify-content: center; gap: 6%; width: 100%; margin-top: -2%; }
+  .game-showcase .play-phone { width: 42%; height: auto; }
+  .game-showcase .play-phone img { width: 100%; height: auto; }
+  .game-showcase-phones .play-phone + .play-phone { display: block; margin-top: 28px; }
   .game-title-row { gap: 14px; }
   .game-entry-icon { width: 64px; height: 64px; }
   .game-details h3 { font-size: clamp(40px, 10vw, 60px); }
