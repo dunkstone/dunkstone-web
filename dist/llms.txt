@@ -1,0 +1,15 @@
+# Dunkstone
+
+> Dunkstone is a two-founder independent studio making mobile games for iOS and Android. Its first game, Cargo Ahoy, is in development.
+
+Dunkstone's site speaks for the studio; each game has its own pages at dunkstone.com/<game>/. Contact: contact@dunkstone.com.
+
+## Studio
+
+- [Dunkstone](https://dunkstone.com/): the studio, its games and how to reach it
+
+## Cargo Ahoy
+
+- [Cargo Ahoy](https://dunkstone.com/cargoahoy/): a one-tap pirate cargo stacker. Stack cargo on your ship as high as you dare, keep the tower balanced as the sea gets rougher, sail from port to port toward Treasure Island and spend the gold from every run on new ships and cargo sets. Free, with in-app purchases; coming to the App Store first, then Google Play.
+- [Support](https://dunkstone.com/cargoahoy/support/): contact, restoring purchases, progress, reminders, privacy choices, deleting data and refunds
+- [Privacy policy](https://dunkstone.com/cargoahoy/privacy/): what the game collects, the ad, purchase and analytics partners, and players' choices

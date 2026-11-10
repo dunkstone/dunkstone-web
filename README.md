@@ -76,6 +76,14 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 - `404.html` is Vercel's page for unknown paths. It speaks for the studio, not any one game, so it links home, to the games and to the studio. Each page names its trailing-slash URL as canonical, since the no-slash form also answers.
 - Motion uses the `--ease`, `--fast` and `--slow` tokens, and `--ease-soft` with `--slower` for the bigger moves (the showcase's zoom and lift). Never split a `cubic-bezier()` when editing transitions: an invalid one drops the whole transition. Pages cross-fade (view transitions) under a still header and footer, hover moves apply only where a pointer hovers, and reduced motion turns them all off.
 
+## Search
+
+- `sitemap.xml` lists every indexable page (not the 404) and `robots.txt` points to it; add a new page there with its `lastmod`. Search and AI-search crawlers (Googlebot, Bingbot, OAI-SearchBot, PerplexityBot, Claude-SearchBot, Applebot) are allowed; `robots.txt` turns away only the AI-training crawlers.
+- JSON-LD: the home page names the studio (`Organization`, `WebSite`); a game page describes its game (`VideoGame`) with the studio as author and publisher by its `@id`. Add `sameAs` to the `Organization` when the studio's social profiles exist, and the store URLs and offers to a game when its listings are live; never ratings or offers that don't exist yet.
+- `llms.txt` is a plain summary of the studio and its games for AI tools: keep it in step with the pages.
+- Every page has its own title, description, canonical and sharing tags (`og:*`, `twitter:card`).
+- Outside this repository: Google Search Console and Bing Webmaster Tools (domain verified by DNS, sitemap submitted) and `www.dunkstone.com` redirecting to the bare domain in Vercel.
+
 ## Asset protection
 
 These deter casual copying; they can't prevent it, since anything a browser shows can be screenshotted or read from dev tools.
