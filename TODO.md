@@ -3,7 +3,7 @@
 Marque `[x]` quando concluir e apague o item quando não fizer mais falta. Nada aqui vai para o ar: o site publica só a pasta `dist/`.
 
 ## Agora
-- [ ] **www e buscadores**: siga o [passo a passo](passo-a-passo-dominio-e-busca.md).
+- [ ] **www e buscadores**:
   - Na Vercel, adicionar `www.dunkstone.com` com redirecionamento para `dunkstone.com`.
   - Na GoDaddy, trocar o CNAME do `www` pelo valor que a Vercel indicar.
   - Verificar o domínio no Google Search Console e enviar o `sitemap.xml`.
