@@ -44,9 +44,9 @@ The original v2 assets below were copied byte-for-byte from these read-only sibl
 | `social.png` | `Branding/press-kit/images/dunkstone-sharing-card-1200x630.png` |
 | `dunkstone-splash.mp4`, `dunkstone-splash.webm` | `Branding/splash-animation/dunkstone-splash-dark.mp4`, `.webm` at `1dd26ca`, the silent cut. Branding has since added a sound to its videos (`8427ecf`, `0cc7b7a`); the site plays the splash muted, so it keeps the silent files |
 | `dunkstone-splash-static.png` | `Branding/splash-animation/dunkstone-splash-dark-static.png` |
-| `cargo-ahoy-icon.png` (512 px), `cargo-ahoy-icon-180.png` | the current approved app icon (the lighter-sky revision, CargoAhoy `33adeefa`), downscaled; the 180 px copy is `CargoAhoy/Assets/_Project/Art/AppIcon/iOS/T_AppIcon_iOS_180.png` |
+| `cargo-ahoy-icon.png` (512 px), `cargo-ahoy-icon-180.png`, `cargo-ahoy-icon-288.webp` | the current approved app icon (the lighter-sky revision, CargoAhoy `33adeefa`), downscaled; the 180 px copy is `CargoAhoy/Assets/_Project/Art/AppIcon/iOS/T_AppIcon_iOS_180.png` |
 | `badge-app-store.svg`, `badge-google-play.png` | Apple's black US-UK "Download on the App Store" badge (developer.apple.com/assets/elements/badges/download-on-the-app-store.svg) and Google's English "Get it on Google Play" badge (play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png), downloaded 2026-11-09, unmodified. Shown unlinked with "Coming soon" / "Coming later" under them until each listing is live; then wrap each in a link to its store page and drop the caption. Keep them the same visible height (Google's at least as large), with a quarter of their height as clear space, and keep the trademark line under the page's links |
-| `cargo-ahoy-wordmark.png` (1200 px wide) | `CargoAhoy/ArtSource/References/Logo/wordmark.png` (approved November 5, 2026), downscaled |
+| `cargo-ahoy-wordmark.png` (1200 px wide), `cargo-ahoy-wordmark.webp` | `CargoAhoy/ArtSource/References/Logo/wordmark.png` (approved November 5, 2026), downscaled |
 | `cargo-ahoy-shot-stack.jpg`, `-voyage.jpg`, `-ships.jpg` (640 px wide) | Captured 2026-11-09 from the main Editor's Device Simulator on "iOS Notch Device Large" (1284 × 2778), so the UI keeps the device's safe area: the storm tower at 62 (each drop aimed along an irregular wave and balance-checked, so it meanders like a played tower), the Map after Kraken Reef's postcard and the Collection's Ships tab (a profile owning five ships with the Red Cutter equipped, voyage at Kraken Reef). All three are whole screens at the same scale. Recapture them, not the Game view's store shots, whenever the game's look changes |
 | `icons.svg` | Hand-built sprite of flat UI icons (arrows, plus, mail) on one 24 px grid with a 2 px square-capped stroke in `currentColor`. Every page uses it through `<svg class="icon"><use href="/assets/icons.svg#name"></use></svg>`; no Unicode arrows or emoji stand in for icons |
 
@@ -56,7 +56,7 @@ Use black `#000000` and off-white `#F4F3ED`. Preserve logo proportions, letterin
 
 ## Hosting
 
-`.openai/hosting.json` retains the existing Sites project identity and serves `dist`. This v2 update is local only: no deployment, domain changes, commits, or pushes. Absolute social URLs use `https://dunkstone.com/`.
+Vercel serves `dist/` at `https://dunkstone.com/` and deploys every push to `main` within about a minute (check a commit with `gh api repos/dunkstone/Website/commits/<sha>/status`). Plain `http://` redirects to `https://`. `www.dunkstone.com` must be added in Vercel's Domains and pointed there by its DNS (GoDaddy) to redirect to the bare domain; until then it fails its certificate. There is no `vercel.json`: unknown paths get `404.html`, and the no-slash form of each page also answers, so pages name their canonical URL. Absolute social URLs use `https://dunkstone.com/`. `.openai/hosting.json` is an old, ignored Sites setting.
 
 ## Validation
 
@@ -83,6 +83,10 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 - `llms.txt` is a plain summary of the studio and its games for AI tools: keep it in step with the pages.
 - Every page has its own title, description, canonical and sharing tags (`og:*`, `twitter:card`).
 - Outside this repository: Google Search Console and Bing Webmaster Tools (domain verified by DNS, sitemap submitted) and `www.dunkstone.com` redirecting to the bare domain in Vercel.
+
+## Image weight
+
+Pages show WebP copies made with `cwebp` from the PNGs: the wordmark at full size (`-q 88 -alpha_q 100 -m 6`, about 130 KB against 900 KB) and the icon at 288 px, three times its largest display (`-q 90 -m 6 -resize 288 288`, about 20 KB against 390 KB). The PNGs stay for sharing tags, JSON-LD and the Apple touch icon, where crawlers expect them. Remake both copies whenever the PNG changes.
 
 ## Asset protection
 
