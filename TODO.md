@@ -1,25 +1,25 @@
-# Pendências do site
+# Site to-dos
 
-Marque `[x]` quando concluir e apague o item quando não fizer mais falta. Nada aqui vai para o ar: o site publica só a pasta `dist/`.
+Tick `[x]` when done, and delete an item once it no longer matters. Nothing here is published: the site serves only `dist/`.
 
-## Agora
-- [ ] **www e buscadores**:
-  - Na Vercel, adicionar `www.dunkstone.com` com redirecionamento para `dunkstone.com`.
-  - Na GoDaddy, trocar o CNAME do `www` pelo valor que a Vercel indicar.
-  - Verificar o domínio no Google Search Console e enviar o `sitemap.xml`.
-  - Importar o site no Bing Webmaster Tools.
+## Now
+- [ ] **www and search engines**
+  - In Vercel, add `www.dunkstone.com`, redirecting to `dunkstone.com`.
+  - At the DNS host, point the `www` CNAME at the value Vercel shows.
+  - Verify the domain in Google Search Console and submit `sitemap.xml`.
+  - Import the site into Bing Webmaster Tools.
 
-## No lançamento do Cargo Ahoy
-- [ ] **Links das lojas**: preencher `appStoreUrl` e `playStoreUrl` em `dist/games.js`. Os selos viram links sozinhos e a legenda "Coming soon" some.
-- [ ] **Dados estruturados do jogo**: acrescentar os links das lojas e a oferta (grátis) ao JSON-LD de `dist/cargoahoy/index.html`. Nota e avaliações só quando forem reais.
-- [ ] **Texto de Android**: revisar suporte e privacidade contra as respostas de Data Safety do Play Console quando o Android sair (CargoAhoy M6, D-144).
-- [ ] **Privacidade**: atualizar a política e a data sempre que o jogo ganhar ou perder um SDK, em sintonia com `docs/STORE_LISTING.md` do CargoAhoy.
-- [ ] **`app-ads.txt`**: acrescentar as linhas de cada nova rede de anúncios que entrar.
-- [ ] **Capturas**: recapturar as três telas no Device Simulator sempre que o visual do jogo mudar (veja "Asset provenance" no README).
+## When Cargo Ahoy launches
+- [ ] **Store links**: fill in `appStoreUrl` and `playStoreUrl` in `dist/games.js`. The badges become links and the "Coming soon" captions go away.
+- [ ] **Game structured data**: add the store links and the offer (free) to the JSON-LD in `dist/cargoahoy/index.html`. Add ratings only once they are real.
+- [ ] **Android wording**: when Android ships, check support and privacy against the Play Console's Data Safety answers.
+- [ ] **Privacy policy**: update it, and its date, whenever the game adds or drops an SDK.
+- [ ] **`app-ads.txt`**: add the lines of each new ad network that goes live.
+- [ ] **Screenshots**: recapture the three screens whenever the game's look changes.
 
-## Para crescer
-- [ ] **Redes sociais do estúdio**: quando existirem, pôr os perfis no rodapé e em `sameAs` no JSON-LD da home.
-- [ ] **Página de imprensa** (`/press/`): descrição do estúdio e do jogo, logos, ícone, capturas e contato. Precisa de decisão antes, porque o download de press kit ficou de fora até agora.
-- [ ] **Notícias ou devlog**: posts curtos que deem ao Google e às IAs texto para citar.
-- [ ] **Métricas de visita**: Vercel Web Analytics, que não usa cookies, mais uma linha sobre o site na política de privacidade.
-- [ ] **Português**: versão pt-BR das páginas principais, se o público brasileiro importar.
+## To grow
+- [ ] **Studio social profiles**: once they exist, add them to the footer and to `sameAs` in the home page's JSON-LD.
+- [ ] **Press page** (`/press/`): the studio and the game in a few lines, with logos, icon, screenshots and a contact. Needs a decision first: there's no press-kit download so far.
+- [ ] **News or devlog**: short posts that give Google and AI search something to quote.
+- [ ] **Visit analytics**: Vercel Web Analytics, which uses no cookies, plus a line about the site in a privacy notice.
+- [ ] **Portuguese**: a pt-BR version of the main pages, if a Brazilian audience matters.
