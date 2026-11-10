@@ -9,6 +9,10 @@ Tick `[x]` when done, and delete an item once it no longer matters. Nothing here
   - Verify the domain in Google Search Console and submit `sitemap.xml`.
   - Import the site into Bing Webmaster Tools.
 
+- [ ] **Terms of use**
+  - Have a lawyer review `/cargoahoy/terms/`, and add a governing-law clause and the postal address Apple asks for.
+  - In App Store Connect, replace Apple's standard EULA with the page's URL.
+
 ## When Cargo Ahoy launches
 - [ ] **Store links**: fill in `appStoreUrl` and `playStoreUrl` in `dist/games.js`. The badges become links and the "Coming soon" captions go away.
 - [ ] **Game structured data**: add the store links and the offer (free) to the JSON-LD in `dist/cargoahoy/index.html`. Add ratings only once they are real.

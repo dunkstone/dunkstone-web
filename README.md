@@ -1,6 +1,6 @@
 # dunkstone-web
 
-The website of Dunkstone, an independent mobile game studio, at [dunkstone.com](https://dunkstone.com/). The home page speaks for the studio. Each game has its own section at `/<game>/`: the game page, `support/` and `privacy/`. Cargo Ahoy is the first.
+The website of Dunkstone, an independent mobile game studio, at [dunkstone.com](https://dunkstone.com/). The home page speaks for the studio. Each game has its own section at `/<game>/`: the game page, `support/`, `privacy/` and `terms/`. Cargo Ahoy is the first.
 
 It's static HTML, CSS and a little JavaScript, with no build step and no dependencies.
 
@@ -23,7 +23,7 @@ Vercel serves `dist/` and deploys every push to `main` in about a minute. There 
 | Path | What it is |
 | --- | --- |
 | `dist/index.html` | Home: the studio, its games list (`#games`) and the studio section (`#studio`) |
-| `dist/<game>/` | A game's page, `support/` and `privacy/` (today `cargoahoy/`) |
+| `dist/<game>/` | A game's page, `support/`, `privacy/` and `terms/` (today `cargoahoy/`) |
 | `dist/404.html` | The studio's page for unknown paths |
 | `dist/games.js`, `dist/app.js` | The games list's data, and the splash and list behaviour |
 | `dist/styles.css` | All styles |
