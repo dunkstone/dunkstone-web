@@ -76,6 +76,16 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 - `404.html` is Vercel's page for unknown paths. It speaks for the studio, not any one game, so it links home, to the games and to the studio. Each page names its trailing-slash URL as canonical, since the no-slash form also answers.
 - Motion uses the `--ease`, `--fast` and `--slow` tokens, and `--ease-soft` with `--slower` for the bigger moves (the showcase's zoom and lift). Never split a `cubic-bezier()` when editing transitions: an invalid one drops the whole transition. Pages cross-fade (view transitions) under a still header and footer, hover moves apply only where a pointer hovers, and reduced motion turns them all off.
 
+## Asset protection
+
+These deter casual copying; they can't prevent it, since anything a browser shows can be screenshotted or read from dev tools.
+
+- Only web-sized copies ship (screenshots 640 px, the wordmark 1200 px). Masters stay in the CargoAhoy and Branding repositories and never go in `dist/`.
+- `protect.js` (on every page) blocks the right-click menu and drag-out on pictures; `styles.css` stops drag-out and iPhone's long-press "Save" on `img` and `video`. Text stays selectable and text links keep their menu. The splash video disallows picture-in-picture and download.
+- The footer reads "© 2026 Dunkstone. All rights reserved."; the game page names Dunkstone and Cargo Ahoy as Dunkstone's trademarks.
+- `robots.txt` turns away AI-training crawlers and allows everything else, so search and link previews keep working; indexable pages also carry `<meta name="robots" content="noai, noimageai">`. Images stay in image search.
+- A new page loads `/protect.js`, carries the same footer and, unless it is noindex, the `noai` meta.
+
 ## Cargo Ahoy pages
 
 - `/cargoahoy/`: the game page, the App Store Marketing URL.
