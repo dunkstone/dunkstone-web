@@ -7,7 +7,7 @@ O `www` já aponta para o site, mas a Vercel ainda não conhece esse endereço, 
 ## 1. www.dunkstone.com → dunkstone.com (Vercel + GoDaddy)
 
 ### Na Vercel
-1. Entre em vercel.com e abra o projeto do site (o que publica o repositório `dunkstone/Website`).
+1. Entre em vercel.com e abra o projeto do site (o que publica o repositório `dunkstone/dunkstone-web`).
 2. Vá em **Settings → Domains**.
 3. Em **Add Domain**, digite `www.dunkstone.com` e confirme.
 4. Se a Vercel perguntar como tratar o domínio, escolha **Redirect to dunkstone.com** (redirecionamento 308, permanente). Se ela adicionar sem perguntar, clique em **Edit** no `www.dunkstone.com` e marque o redirecionamento para `dunkstone.com`.

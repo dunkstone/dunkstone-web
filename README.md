@@ -33,7 +33,7 @@ The renderer reuses the existing HTML feature by title, updates catalogue fields
 
 ## Asset provenance and handling
 
-The original v2 assets below were copied byte-for-byte from these read-only sibling repositories; only Website is edited:
+The original v2 assets below were copied byte-for-byte from these read-only repositories; only this one (`dunkstone/dunkstone-web`) is edited. `Branding/` paths are in `dunkstone/dunkstone-branding` and `CargoAhoy/` paths in `dunkstone/CargoAhoy`:
 
 | Website asset (`dist/assets/`) | Approved source |
 | --- | --- |
@@ -56,7 +56,7 @@ Use black `#000000` and off-white `#F4F3ED`. Preserve logo proportions, letterin
 
 ## Hosting
 
-Vercel serves `dist/` at `https://dunkstone.com/` and deploys every push to `main` within about a minute (check a commit with `gh api repos/dunkstone/Website/commits/<sha>/status`). Plain `http://` redirects to `https://`. `www.dunkstone.com` must be added in Vercel's Domains and pointed there by its DNS (GoDaddy) to redirect to the bare domain; until then it fails its certificate. There is no `vercel.json`: unknown paths get `404.html`, and the no-slash form of each page also answers, so pages name their canonical URL. Absolute social URLs use `https://dunkstone.com/`. `.openai/hosting.json` is an old, ignored Sites setting.
+Vercel serves `dist/` at `https://dunkstone.com/` and deploys every push to `main` within about a minute (check a commit with `gh api repos/dunkstone/dunkstone-web/commits/<sha>/status`). Plain `http://` redirects to `https://`. `www.dunkstone.com` must be added in Vercel's Domains and pointed there by its DNS (GoDaddy) to redirect to the bare domain; until then it fails its certificate. There is no `vercel.json`: unknown paths get `404.html`, and the no-slash form of each page also answers, so pages name their canonical URL. Absolute social URLs use `https://dunkstone.com/`. `.openai/hosting.json` is an old, ignored Sites setting.
 
 ## Validation
 
