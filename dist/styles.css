@@ -124,7 +124,6 @@ h2 { font-family: 'Arial Black', Arial, sans-serif; font-weight: 900; font-size:
 .footer-brand img { width: 32px; height: 32px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-left: auto; font-size: 12px; font-weight: 700; }
 .footer-links a { color: var(--muted); padding: 6px 0; transition: color var(--fast) var(--ease); }
-.footer-links a[aria-current="page"] { color: var(--paper); text-decoration: underline; text-underline-offset: 5px; }
 .footer-copy, .footer-top { font-size: 11px; color: var(--stone); margin: 0; }
 .footer-top { transition: color var(--fast) var(--ease); }
 .footer-top span { display: inline-flex; margin-left: 10px; font-size: 13px; vertical-align: -2px; }

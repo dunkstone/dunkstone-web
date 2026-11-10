@@ -1,13 +1,13 @@
 # Dunkstone website v2
 
-The official single-page website for Dunkstone, a two-founder independent mobile game studio. V2 adopts the approved Drop In branding and introduces **Cargo Ahoy**, our first upcoming game.
+The official website of Dunkstone, a two-founder independent mobile game studio. The home page speaks for the studio; each game has its own section at `/<game>/` (the game page, `support/` and `privacy/`). **Cargo Ahoy** is the first. V2 adopts the approved Drop In branding.
 
 ## Website contents
 
 - Responsive monochrome homepage with “Small studio. Big play.”
 - Approved SVG studio logos, size-appropriate stone icons, and updated sharing artwork.
 - Three-second, silent splash with WebM/MP4 sources, a settled-frame fallback, and reduced-motion support.
-- Cargo Ahoy feature with approved game artwork, the one-tap stacking pitch, gameplay highlights, development status, and iOS-first / Android-later plans.
+- A games list on the home page, with Cargo Ahoy as its first entry (approved artwork, the pitch, development status), each entry leading to the game's own section.
 - Studio introduction, keyboard navigation, visible focus, and skip-to-content link.
 - Complete Cargo Ahoy introduction available without JavaScript.
 
@@ -69,7 +69,9 @@ Check desktop, tablet, and phone widths down to 320 px, asset loading, keyboard 
 
 ## Navigation
 
-- Every page carries the same header (the stone and "Dunkstone" home, the page group's nav, Contact) and the same footer (Cargo Ahoy · Support · Privacy · Contact, the current page marked with `aria-current`). Each page holds its own copy, so change all five together: `index.html`, `404.html` and the three `cargoahoy/` pages.
+- The footer is the studio's and identical on every page: the stone home, Games · Studio · Contact, the copyright and Back to top. It never links to one game's pages.
+- The header is the stone and "Dunkstone" home, then the page group's nav (the studio's Games / Our studio, or a game's own pages with `aria-current`), then Contact. Each page holds its own copy, so change all five together: `index.html`, `404.html` and the three `cargoahoy/` pages.
+- A new game adds its own `/<slug>/` pages with its own header nav, a card in `#games` and an entry in `games.js`, never footer links.
 - Support's questions and the policy's sections have ids: link to `/cargoahoy/support/#refunds`, `#restore`, `#delete-data` and so on, or `/cargoahoy/privacy/#rights`. Support opens the linked answer.
 - `404.html` is Vercel's page for unknown paths. It speaks for the studio, not any one game, so it links home, to the games and to the studio. Each page names its trailing-slash URL as canonical, since the no-slash form also answers.
 - Motion uses the `--ease`, `--fast` and `--slow` tokens, and `--ease-soft` with `--slower` for the bigger moves (the showcase's zoom and lift). Never split a `cubic-bezier()` when editing transitions: an invalid one drops the whole transition. Pages cross-fade (view transitions) under a still header and footer, hover moves apply only where a pointer hovers, and reduced motion turns them all off.
