@@ -13,4 +13,4 @@ Dunkstone's site speaks for the studio; each game has its own pages at dunkstone
 - [Cargo Ahoy](https://dunkstone.com/cargoahoy/): a one-tap pirate cargo stacker. Stack cargo on your ship as high as you dare, keep the tower balanced as the sea gets rougher, sail from port to port toward Treasure Island and spend the gold from every run on new ships and cargo sets. Free, with in-app purchases; coming to the App Store first, then Google Play.
 - [Support](https://dunkstone.com/cargoahoy/support/): contact, restoring purchases, progress, reminders, privacy choices, deleting data and refunds
 - [Privacy policy](https://dunkstone.com/cargoahoy/privacy/): what the game collects, the ad, purchase and analytics partners, and players' choices
-- [Terms of use](https://dunkstone.com/cargoahoy/terms/): the licence to play, gold and purchases, and the App Store and Google Play terms
+- [Terms of use](https://dunkstone.com/cargoahoy/terms/): the game's rules, gold and purchases, on top of Apple's standard licence
