@@ -64,6 +64,7 @@ It sends every URL in `sitemap.xml` to IndexNow, which Bing (and Yandex, Naver, 
 - Pages show WebP copies of large PNGs, made with `cwebp`. Keep the PNG for sharing tags and JSON-LD.
 - Store badges are Apple's and Google's official ones, unmodified, with their trademark line on the page.
 - Icons come from `icons.svg`, never emoji or Unicode arrows.
+- Every `<img>` has alt text, including decorative ones, for search engines. Inside a link named by `aria-label`, or a block that's `aria-hidden`, screen readers don't read it twice.
 - Studio colours are black `#000000` and off-white `#F4F3ED`. Keep the logo's proportions and clear space, and never use the studio stone as a game icon.
 
 **Motion**
