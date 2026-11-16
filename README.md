@@ -14,9 +14,11 @@ Then open http://127.0.0.1:4173.
 
 ## Deploy
 
-Vercel serves `dist/` and deploys every push to `main` in about a minute. There is no `vercel.json`:
-- Unknown paths get `404.html`.
-- A page also answers without its trailing slash, so every page names its canonical URL.
+Vercel serves `dist/` and deploys every push to `main` in about a minute. `vercel.json`, at the repository root, sets:
+- `trailingSlash`: a page asked for without its trailing slash redirects to it, so each page has one URL. Every page still names its canonical URL.
+- `X-Robots-Tag: noindex` on `sitemap.xml`, `robots.txt`, `llms.txt` and `app-ads.txt`: crawlers still read them, but they stay out of search results.
+
+Unknown paths get `404.html`.
 
 ## Layout
 
