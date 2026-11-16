@@ -3,7 +3,7 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/(sitemap\\.xml|robots\\.txt|llms\\.txt|app-ads\\.txt)",
+      "source": "/(sitemap\\.xml|robots\\.txt|llms\\.txt|app-ads\\.txt|[0-9a-f]{32}\\.txt)",
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
     }
   ]

@@ -16,9 +16,19 @@ Then open http://127.0.0.1:4173.
 
 Vercel serves `dist/` and deploys every push to `main` in about a minute. `vercel.json`, at the repository root, sets:
 - `trailingSlash`: a page asked for without its trailing slash redirects to it, so each page has one URL. Every page still names its canonical URL.
-- `X-Robots-Tag: noindex` on `sitemap.xml`, `robots.txt`, `llms.txt` and `app-ads.txt`: crawlers still read them, but they stay out of search results.
+- `X-Robots-Tag: noindex` on `sitemap.xml`, `robots.txt`, `llms.txt`, `app-ads.txt` and the IndexNow key file: crawlers still read them, but they stay out of search results.
 
 Unknown paths get `404.html`.
+
+### Tell search engines
+
+Once a push that adds or changes pages has deployed, run:
+
+```sh
+scripts/indexnow.sh
+```
+
+It sends every URL in `sitemap.xml` to IndexNow, which Bing (and Yandex, Naver, Seznam) read within hours. Pass URLs to send only those. The key is the `dist/<32 hex>.txt` file, which must stay published. Google doesn't use IndexNow: it reads the sitemap.
 
 ## Layout
 
@@ -32,6 +42,7 @@ Unknown paths get `404.html`.
 | `dist/protect.js` | Blocks the right-click menu and drag-out on pictures |
 | `dist/assets/` | Web-sized images, the splash video and `icons.svg` (the UI icon sprite) |
 | `dist/robots.txt`, `sitemap.xml`, `llms.txt`, `app-ads.txt` | Crawlers, search, AI tools and the ad networks' authorized sellers |
+| `dist/<32 hex>.txt`, `scripts/indexnow.sh` | The IndexNow key, and the script that sends changed pages to Bing |
 
 ## Rules
 
